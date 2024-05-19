@@ -13,6 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		console.log(mname);
 		console.log(mage);
+
+		let newCard = document.createElement("div");
+		newCard.textContent = `Name: ${mname}`; 
+		const cardsDiv = document.getElementById("cards");
+		cardsDiv.appendChild(newCard);
 	});
 
 });
