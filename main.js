@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		let card = new MemberCard(name, description, age, img);
 		card.newCard(document);
 
+		memberForm.reset();
 	});
 
 });
