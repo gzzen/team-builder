@@ -1,3 +1,7 @@
+import { MemberCard } from "./memberCard.js";
+import { loadCards } from "./persistency.js";
+
+// add cards
 document.addEventListener("DOMContentLoaded", () => {
 
 	const memberForm = document.getElementById("memberform");
@@ -6,18 +10,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		const formData = new FormData(memberForm);
 
-		let mname = formData.get("fname");
-		let mdescription = formData.get("fdescription");
-		let mage = formData.get("fage");
-		let mimg = formData.get("fimg");
+		let name = formData.get("fname");
+		let description = formData.get("fdescription");
+		let age = formData.get("fage");
+		let img = formData.get("fimg");
 
-		console.log(mname);
-		console.log(mage);
+		let card = new MemberCard(name, description, age, img);
+		card.newCard(document);
 
-		let newCard = document.createElement("div");
-		newCard.textContent = `Name: ${mname}`; 
-		const cardsDiv = document.getElementById("cards");
-		cardsDiv.appendChild(newCard);
 	});
 
 });
+
+
+// retrieve cards in JSON file
+try {
+	let cards = await loadCards();
+	// console.log(cards);
+	for (let rawCard of cards) {
+		// console.log(rawCard);
+		let card = new MemberCard(rawCard.name, rawCard.description, rawCard.age, rawCard.img);
+		card.newCard(document);
+	}
+
+} catch (err) {
+	console.log("failed to load cards in JSON file");
+}
