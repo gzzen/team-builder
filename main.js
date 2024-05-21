@@ -21,6 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		memberForm.reset();
 	});
 
+	const deleteAllButton = document.getElementById("delete-all");
+	deleteAllButton.addEventListener("click", (e) => {
+		e.preventDefault();
+
+		const cardsDiv = document.getElementById("cards");
+		cardsDiv.style.display = "none";
+	});
+
 });
 
 

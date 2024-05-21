@@ -9,10 +9,22 @@ export class MemberCard {
 
 	newCard(document) {
 		let card = document.createElement("div");
+		card.id = "card";
 
 		let nameText = document.createElement("p");
-		nameText.textContent = `Name: ${this.name}`;
+		nameText.id = "name-field";
+		nameText.textContent = `${this.name}`;
 		card.appendChild(nameText);
+
+		let ageText = document.createElement("p");
+		ageText.id = "age-field";
+		ageText.textContent = `${this.age} years old`;
+		card.appendChild(ageText);
+
+		let desText = document.createElement("p");
+		desText.id = "description-field";
+		desText.textContent = `${this.description}`;
+		card.appendChild(desText);
 
 		let imgContent = document.createElement("img");
 		imgContent.src = this.img;
