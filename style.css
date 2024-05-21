@@ -1,0 +1,146 @@
+body {
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+.title {
+	font: italic 5rem "phosphate";
+}
+
+.navbar {
+	background-color: #fff;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+
+.navbar a {
+	font: bold 1em "arial";
+	float: left; 
+	display: block; 
+	color: grey; 
+	margin: 7px;
+	text-align: center;
+	padding: 17px 20px;
+	text-decoration: none;
+	font-size: 17px;
+	border-radius: 13px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.navbar a.active {
+	background-color: #fa7dd0;
+	color: white;
+}
+
+.navbar a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.navbar a.active:hover {
+	background-color: #c795b6;
+	color: black;
+}
+
+#memberform {
+	display: flex;
+	flex-direction: row;
+	gap: 20%;
+}
+
+.info-field {
+	color: grey;
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	margin-left: 5px;
+	margin-bottom: 20px;
+}
+
+.info-field input {
+	margin-bottom: 15px;
+	height: 20px;
+	/* border-radius: 5px; */
+	border: 1px solid;
+	border-color: #ddd;
+	outline: none;
+	padding: 3px;
+	padding-left: 10px;
+	border-radius: 10px;
+}
+
+.info-field label {
+	font: 0.8em "arial";
+	margin-bottom: 3px;
+	margin-left: 4px;
+}
+
+.form-buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.form-buttons .member-submit {
+	color: rgb(70, 70, 70);
+	height: 200px;
+	width: 200px;
+	font: 1em "arial black";
+	font-size: xx-large;
+	background-color: #fff;
+	border: none;
+	border-radius: 50%;
+	box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+	transition: 0.3s;
+}
+
+.form-buttons .member-submit:hover {
+	background-color: #feeffc;
+	/* background: radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(240,46,170,0.4) 100%); */
+}
+
+.form-buttons .member-submit:active {
+	/* background-color: #feeffc; */
+	background: radial-gradient(circle, rgba(240,46,170,0.2) 10%, rgba(255,255,255,1) 100%); 
+}
+
+.form-buttons .member-clear {
+	width: 100px;
+	border: none;
+	background: none;
+}
+
+.form-buttons .member-clear:hover {
+	color: gray;
+}
+
+#cards {
+	display: flex;
+	flex-direction: column;
+	margin-top: 75px;
+}
+
+#card {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+	width: 40%;
+	margin-left: 15%;
+	margin-top: 2%;
+	border-radius: 5%;
+	padding: 1.5%;
+	font-family: "arial";
+	color: rgb(70, 70, 70);
+}
+
+#name-field {
+	font: bold 1.3em "arial";
+}
+
+img {
+	width:100%
+}
+
+.about-content {
+	font-family: "arial";
+	color: rgb(70, 70, 70);
+}
+
